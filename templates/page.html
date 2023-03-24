@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if 'blog' in page.meta %}
+    <h2>{{ page.title }}</h2>
+  {% endif %}
+
+  {{ page.html|safe }}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Main Content</h2>
+{% for page in pages if 'content' in page.meta %}
+  <a href="{{ url_for("page", path=page.path) }}" class="hidden removeMe">{{ page.title }}</a>
+
+  <div hx-get="{{ url_for("page", path=page.path) }}" 
+       hx-swap="innerHTML"
+       hx-trigger="load"> 
+    ... main content ... 
+  </div>
+{% endfor %}
+
+
+<h2>Blog</h2>
+<ul>
+  {% for page in pages if 'blog' in page.meta %}
+    <li><a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a></li>
+  {% else %}
+    <li> ... blog ... </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
