@@ -13,17 +13,11 @@
 <body>
   
   <div class="wrapper">
-    <nav>
-      <a href="{{ url_for("index") }}">Home</a>
-    </nav>
 
     {% block content %}
       <p> BASE.HTML </p>
     {% endblock %}
 
-    <footer>
-      <p class="copyright">Copyright &copy; <span class="currentYear">CURRENT YEAR</span>.</p>
-    </footer>
   </div>
   
 </body>

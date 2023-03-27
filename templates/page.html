@@ -3,9 +3,14 @@
 {% block content %}
 
   {% if 'blog' in page.meta %}
+    {% include "nav.html" %}
     <h2>{{ page.title }}</h2>
   {% endif %}
 
   {{ page.html|safe }}
+
+  {% if 'blog' in page.meta %}
+    {% include "footer.html" %}
+  {% endif %}
 
 {% endblock %}

@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% include "nav.html" %}
+
 <h2>Main Content</h2>
 {% for page in pages if 'content' in page.meta %}
   <a href="{{ url_for("page", path=page.path) }}" class="hidden removeMe">{{ page.title }}</a>
@@ -22,5 +24,7 @@
     <li> ... blog ... </li>
   {% endfor %}
 </ul>
+
+{% include "footer.html" %}
 
 {% endblock %}
