@@ -1,6 +1,6 @@
 # Flask Jamstack Blog
 
-The goal of this project is to create a JamStack site that is based on Python. I want to spend less time dealing with HTML and CSS and instead use Markdown to create the site content while automating the rest with Python. I need stronger Python chops to advance my career and I want a space to express my thoughts that I created.
+The goal of this project is to create a JamStack site that is based on Python. I want to spend less time baking everything from scratch and instead get better with existing content and layout tools while automating the rest with Python. I need stronger Python chops to advance my career and I want a space to express my thoughts that I created.
 
 ### To install the requirements:
 
@@ -36,3 +36,5 @@ The following resources were used in whole, in part, or to supplement the unders
 * [Stack Overflow: Frozen flask creates the files but gets the links wrong](https://stackoverflow.com/questions/21956626/frozen-flask-creates-the-files-but-gets-the-links-wrong)
 * [PythonHow: Adding CSS styling to your website](https://pythonhow.com/python-tutorial/flask/Adding-CSS-styling-to-your-website/)
 * [HTMX.org](https://htmx.org/)
+* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+* [Stack Overflow - background image masking](https://stackoverflow.com/questions/65391991/css-in-bootstrap-4-mask)

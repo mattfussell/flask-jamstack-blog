@@ -4,6 +4,18 @@
 
 {% include "nav.html" %}
 
+<!-- Hero -->
+<header class="p-5 text-center bg-image">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Heading</h1>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Hero -->
+
 <h2>Main Content</h2>
 {% for page in pages if 'content' in page.meta %}
   <a href="{{ url_for("page", path=page.path) }}" class="hidden removeMe">{{ page.title }}</a>
