@@ -27,10 +27,11 @@ def index():
 
 
 # routing: flat pages
-@app.route('/<path:path>/')
+@app.route('/blog/<path:path>/')
 def page(path):
     page = pages.get_or_404(path)
-    return render_template('page.html', page=page)
+    title = f"FJB | {page.meta.get('title')}" if not page.meta.get('content') else 'FJB'
+    return render_template('page.html', pages=pages, page=page, title=title)
 
 
 # main: remap server port

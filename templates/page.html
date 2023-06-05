@@ -4,10 +4,20 @@
 
   {% if 'blog' in page.meta %}
     {% include "nav.html" %}
-    <h2>{{ page.title }}</h2>
+    {% include "site_hero.html" %}
   {% endif %}
 
-  {{ page.html|safe }}
+
+    {% if 'blog' in page.meta %}
+      <main id="main" class="container mt-2">
+        <h2>{{ page.title }}</h2>
+    {% endif %}
+
+        {{ page.html|safe }}
+
+    {% if 'blog' in page.meta %}  
+      </main>
+    {% endif %}
 
   {% if 'blog' in page.meta %}
     {% include "footer.html" %}
