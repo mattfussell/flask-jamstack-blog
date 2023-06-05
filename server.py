@@ -1,6 +1,7 @@
 import sys, os
-from flask import Flask, render_template
+from flask import Flask, render_template, render_template_string
 from flask_flatpages import FlatPages
+from flask_flatpages.utils import pygmented_markdown
 from flask_frozen import Freezer
 from flask_htmx import HTMX
 
@@ -9,6 +10,18 @@ DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite']
+FLATPAGES_EXTENSION_CONFIGS = {
+    'codehilite': {
+        'linenums': 'True',
+        'guess_lang': 'True',
+        'pygments_style': 'friendly',
+        'noclasses': 'True'
+    }
+}
+
+def my_renderer(text):
+    prerendered_body = render_template_string(text)
+    return pygmented_markdown(prerendered_body)
 
 # config: freezer
 FREEZER_RELATIVE_URLS = True
@@ -16,6 +29,7 @@ FREEZER_RELATIVE_URLS = True
 # config: app
 app = Flask(__name__)
 app.config.from_object(__name__)
+app.config['FLATPAGES_HTML_RENDERER'] = my_renderer
 pages = FlatPages(app)
 freezer = Freezer(app)
 htmx = HTMX(app)
@@ -23,7 +37,10 @@ htmx = HTMX(app)
 # routing: home page
 @app.route('/')
 def index():
-    return render_template('index.html', pages=pages)
+    content = (p for p in pages if 'content' in p.meta)
+    blogs = (p for p in pages if 'blog' in p.meta)
+    sorted_blogs = sorted(blogs, key=lambda p: p.meta['date'], reverse=True)
+    return render_template('index.html', content=content, pages=sorted_blogs)
 
 
 # routing: flat pages

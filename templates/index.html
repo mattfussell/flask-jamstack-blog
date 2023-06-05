@@ -10,9 +10,7 @@
 
 <main id="main" class="container mt-2">
 
-  <h2>Main Content</h2>
-
-  {% for page in pages if 'content' in page.meta %}
+  {% for page in content if 'content' in page.meta %}
   
     <div hx-get="{{ url_for("page", path=page.path) }}" 
           hx-swap="innerHTML"
