@@ -15,7 +15,7 @@ FLATPAGES_EXTENSION_CONFIGS = {
         'linenums': 'True',
         'guess_lang': 'True',
         'pygments_style': 'friendly',
-        'noclasses': 'True'
+        'noclasses': 'False'
     }
 }
 

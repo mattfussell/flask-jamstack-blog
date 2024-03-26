@@ -4,7 +4,7 @@ The goal of this project is to create a JamStack site that is based on Python. I
 
 ### To install the requirements:
 
-Use `pipenv shell` to launch a virtual environment, the `activate` *if necessary*. Then run the following command:
+Use `pipenv shell` to launch a virtual environment, the `activate` _if necessary_. Then run the following command:
 
 ```python
 pipenv install --dev
@@ -22,19 +22,20 @@ pipenv install --dev
 
 The following resources were used in whole, in part, or to supplement the understanding of the technologies related to making this site.
 
-* [Flask Documentation](https://flask.palletsprojects.com/en/2.2.x/)
-* [Jinja Documentation](https://jinja.palletsprojects.com/)
-* [Werkzeug Documentation](https://werkzeug.palletsprojects.com/)
-* [Steven Loria: Hosting Static Flask Sites on Github Pages](https://stevenloria.com/hosting-static-flask-sites-on-github-pages/)
-* [Flask Flat Pages](https://pythonhosted.org/Flask-FlatPages/)
-* [Frozen Flask](https://pythonhosted.org/Frozen-Flask/)
-* [Pygments](https://pygments.org/download/)
-* [PyPi: Pygments](https://pypi.org/project/Pygments/)
-* [Github Pages](https://pages.github.com/)
-* [JamStack](https://jamstack.org/)
-* [John B Yang: Flask Website](https://john-b-yang.github.io/flask-website/)
-* [Stack Overflow: Frozen flask creates the files but gets the links wrong](https://stackoverflow.com/questions/21956626/frozen-flask-creates-the-files-but-gets-the-links-wrong)
-* [PythonHow: Adding CSS styling to your website](https://pythonhow.com/python-tutorial/flask/Adding-CSS-styling-to-your-website/)
-* [HTMX.org](https://htmx.org/)
-* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-* [Stack Overflow - background image masking](https://stackoverflow.com/questions/65391991/css-in-bootstrap-4-mask)
+- [Flask Documentation](https://flask.palletsprojects.com/en/2.2.x/)
+- [Jinja Documentation](https://jinja.palletsprojects.com/)
+- [Werkzeug Documentation](https://werkzeug.palletsprojects.com/)
+- [Steven Loria: Hosting Static Flask Sites on Github Pages](https://stevenloria.com/hosting-static-flask-sites-on-github-pages/)
+- [Flask Flat Pages](https://pythonhosted.org/Flask-FlatPages/)
+- [Frozen Flask](https://pythonhosted.org/Frozen-Flask/)
+- [Pygments](https://pygments.org/download/)
+- [PyPi: Pygments](https://pypi.org/project/Pygments/)
+- [Github Pages](https://pages.github.com/)
+- [JamStack](https://jamstack.org/)
+- [John B Yang: Flask Website](https://john-b-yang.github.io/flask-website/)
+- [Stack Overflow: Frozen flask creates the files but gets the links wrong](https://stackoverflow.com/questions/21956626/frozen-flask-creates-the-files-but-gets-the-links-wrong)
+- [PythonHow: Adding CSS styling to your website](https://pythonhow.com/python-tutorial/flask/Adding-CSS-styling-to-your-website/)
+- [HTMX.org](https://htmx.org/)
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Stack Overflow - background image masking](https://stackoverflow.com/questions/65391991/css-in-bootstrap-4-mask)
+- [GitHub - richleland/pygments-css](https://github.com/richleland/pygments-css)
