@@ -1,5 +1,7 @@
+---
 title: Landing Page Content
 content: content
+---
 
 ## Easily Control Your Page Content
 
