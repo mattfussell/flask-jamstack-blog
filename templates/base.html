@@ -27,10 +27,13 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/styles.css') }}"
     />
+    <!--
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/pygments-css/friendly.css') }}"
     />
+    -->
+    <link rel="stylesheet" href="{{ url_for('pygments_css') }}" />
 
     {# JavaScript: HTMX, Bootstrap, local #}
     <script src="{{ url_for('static', filename='js/htmx.min.js') }}"></script>

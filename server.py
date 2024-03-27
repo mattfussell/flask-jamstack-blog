@@ -1,7 +1,7 @@
 import sys, os
 from flask import Flask, render_template, render_template_string
 from flask_flatpages import FlatPages
-from flask_flatpages.utils import pygmented_markdown
+from flask_flatpages.utils import pygmented_markdown, pygments_style_defs
 from flask_frozen import Freezer
 from flask_htmx import HTMX
 
@@ -33,6 +33,12 @@ app.config['FLATPAGES_HTML_RENDERER'] = my_renderer
 pages = FlatPages(app)
 freezer = Freezer(app)
 htmx = HTMX(app)
+
+# https://flask-flatpages.readthedocs.io/en/latest/
+@app.route('/pygments.css')
+def pygments_css():
+    return pygments_style_defs('friendly'), 200, {'Content-Type': 'text/css'}
+
 
 # routing: home page
 @app.route('/')
