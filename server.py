@@ -14,14 +14,15 @@ FLATPAGES_EXTENSION_CONFIGS = {
     'codehilite': {
         'linenums': 'True',
         'guess_lang': 'True',
-        'pygments_style': 'friendly',
-        'noclasses': 'False'
+        #'pygments_style': 'friendly',
+        #'noclasses': 'False'
     }
 }
 
 def my_renderer(text):
     prerendered_body = render_template_string(text)
     return pygmented_markdown(prerendered_body)
+
 
 # config: freezer
 FREEZER_RELATIVE_URLS = True
@@ -33,11 +34,6 @@ app.config['FLATPAGES_HTML_RENDERER'] = my_renderer
 pages = FlatPages(app)
 freezer = Freezer(app)
 htmx = HTMX(app)
-
-# https://flask-flatpages.readthedocs.io/en/latest/
-@app.route('/pygments.css')
-def pygments_css():
-    return pygments_style_defs('friendly'), 200, {'Content-Type': 'text/css'}
 
 
 # routing: home page
@@ -55,6 +51,12 @@ def page(path):
     page = pages.get_or_404(path)
     title = f"FJB | {page.meta.get('title')}" if not page.meta.get('content') else 'FJB'
     return render_template('page.html', pages=pages, page=page, title=title)
+
+
+# https://flask-flatpages.readthedocs.io/en/latest/
+@app.route('/pygments.css')
+def pygments_css():
+    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
 
 
 # main: remap server port
